@@ -51,7 +51,7 @@ const HotjobCard = ({ job }) => {
             ))}
           </div>
           <div className="card-actions justify-end flex items-center">
-            <p>
+            <p className="font-bold">
               Salary: {salaryRange.min}-{salaryRange.max} {salaryRange.currency}
             </p>
             <Link to={`/jobs/${_id}`}>

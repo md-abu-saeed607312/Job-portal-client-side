@@ -11,8 +11,7 @@ const JobsApply = () => {
 
   const applyHandel = (e) => {
     e.preventDefault();
-    console.log(e);
-
+  
     const form = e.target;
     const facebook= form.facebook.value;
     const linkdin= form.linkdin.value;
@@ -72,6 +71,7 @@ const JobsApply = () => {
             <input
               type="file"
               name="resume"
+              required
               className="w-full p-2 border rounded"
             />
           </div>
@@ -82,6 +82,7 @@ const JobsApply = () => {
             <input
               type="url"
               name="facebook"
+              required
               className="w-full p-2 border rounded"
             />
           </div>
@@ -92,6 +93,7 @@ const JobsApply = () => {
             <input
               type="url"
               name="linkdin"
+              required
               className="w-full p-2 border rounded"
             />
           </div>

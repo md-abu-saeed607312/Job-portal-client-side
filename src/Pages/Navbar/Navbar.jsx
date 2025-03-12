@@ -21,12 +21,13 @@ const Navbar = () => {
       <li><NavLink to={"/"}>Home</NavLink></li>
       <li><NavLink to={"/myapplication"}>My Application</NavLink></li>
       <li><NavLink to={"/addjobs"}>Job Post</NavLink></li>
+      <li><NavLink to={"/mypostedJobs"}>My Posted Jobs</NavLink></li>
      
     </>
   );
   return (
     <div>
-      <div className="navbar bg-base-100 shadow-sm  fixed">
+      <div className='navbar bg-base-100 shadow-sm z-50 backdrop:blur-xl fixed'>
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

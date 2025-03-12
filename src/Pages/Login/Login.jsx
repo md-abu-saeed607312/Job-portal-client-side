@@ -5,6 +5,7 @@ import { useContext, useState } from "react";
 import AuthContex from "../../Contex/AuthContex";
 import { useLocation, useNavigate } from "react-router-dom";
 import GoogleLoing from "../../Social Login/GoogleLoing";
+import axios from "axios";
 
 const Login = () => {
   const naviget=useNavigate()
@@ -22,8 +23,13 @@ const Login = () => {
 
     logingUser(email, password)
       .then((result) => {
-        naviget(location?.state?location.state:"/")
-        console.log(result);
+        // naviget(location?.state?location.state:"/")
+        console.log('sign in',result.user.email);
+        const user={email:email}
+        axios.post("http://localhost:5000/jwt",user)
+        .then(res=>{
+          console.log(res.data);
+        })
       })
       .catch((error) => {
         setError("login fail ,please tray again")
